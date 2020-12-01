@@ -1,0 +1,37 @@
+<br><br>
+
+
+<div>
+
+
+    <h1>
+        Ajouter un sondage</h1>
+
+
+
+    <form>
+        <p><input type="email" name="titre" placeholder="Ttire" [(ngModel)]="titre"></p>
+        <p><input type="text" name="description" placeholder="description" [(ngModel)]="description"></p>
+        <p><input type="submit" value="S'inscrire" (click)="createSondage()"></p>
+    </form>
+</div>
+
+
+<br><br><br><br><br>
+<table>
+    <caption>Les sondages</caption>
+    <thead>
+        <tr>
+            <th scope="col">Titre</th>
+            <th scope="col">Description</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let sondage of sondages">
+            <td data-label="Titre"> <a [routerLink]="[ '/vote', sondage._id ]">{{sondage?.titre}} </a> </td>
+            <td data-label=" Description">{{sondage?.description}}</td>
+
+        </tr>
+    </tbody>
+</table>

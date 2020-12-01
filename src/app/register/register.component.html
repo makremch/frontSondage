@@ -1,0 +1,11 @@
+<div class="login">
+    <div class="login-triangle"></div>
+
+    <h2 class="login-header">Inscription</h2>
+
+    <form class="login-container">
+        <p><input type="email" name="email" placeholder="Email" [(ngModel)]="email"></p>
+        <p><input type="password" name="mot de passe: " placeholder="Password" [(ngModel)]="password"></p>
+        <p><input type="submit" value="S'inscrire" (click)="register()"></p>
+    </form>
+</div>
